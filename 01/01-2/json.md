@@ -40,6 +40,6 @@ const user = {
 
 호출 및 사용은 다음과 같다.
 
-```
-user.name, user.phone, user.info.height
+```javascript
+user.name, user.phone, user.info.height;
 ```
