@@ -1,9 +1,9 @@
 1장 - Node 간단한 설명 및 설치, 사전 지식
 2장 - HTTP 모듈 사용법 및 fs
-3장 - Express 모듈 사용법
+3장 - Express 기본 사용법
 4장 - HTTP Method 및 상태값 설명
-5장 - Express 미들웨어(winston, router, body parser)
-6장 - MariaDB 설치 및 기본 개념
-7장 - MariaDB와 Node 연결
+5장 - MariaDB 설치 및 기본 개념
+6장 - MariaDB와 Node 연결
+7장 - Express 미들웨어(winston, router, body parser)
 8장 - (가능하면) Express로 SNS 서비스 만들기
 9장 - Socket.io로 채팅방 만들기
