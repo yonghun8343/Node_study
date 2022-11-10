@@ -17,23 +17,23 @@ Node에서는 전역으로 함수를 넣어 사용자의 편의성을 증진 시
 아래의 코드는 위의 Console 예제입니다.
 
 ```javascript
-const string = abd;
+const string = "abd";
 const number = 1;
 const boolean = true;
 const obj = {
   outside: {
     inside: {
-      key: 'value
-    }
-  }
-}
+      key: "value",
+    },
+  },
+};
 console.time("전체 시간");
 console.log("평범한 로그입니다. 쉼표로 구분해 여러 값을 찍을 수 있습니다.");
 console.log(string, number, boolean);
 console.error("에러 메시지는 console.error에 담아주세요");
 
-console.dir(obj, {color: false, depth: 2});
-console.dir(obj, {color: true, depth: 1});
+console.dir(obj, { color: false, depth: 2 });
+console.dir(obj, { color: true, depth: 1 });
 
 console.time("시간 측정");
 for (let i = 0; i < 100000; i++) {
@@ -95,7 +95,7 @@ const immediate2 = setImmediate(() => {
 clearImmediate(immediate2);
 ```
 
-### **filename, **dirname
+### \_\_filename, \_\_dirname
 
 노드에서는 파일 사이에 모듈 관계가 있는 경우가 있어 현재 ㅍ라일의 경로나 파일 명을 알아야 하는 경우가 있습니다. 노드는 **filename, **dirname이라는 키워드로 경로에 대한 정보를 제공 합니다.
 
