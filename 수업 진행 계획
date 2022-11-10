@@ -8,7 +8,7 @@
   2. 여기서 설명 하는 것 특징
   3. 연결하기
   4. 연결 후 정보 조회하기
-  5. CURD 사용 법
+  5. CRUD 사용 법
   6. .env사용법
 7장 - Express 미들웨어(winston, router, body parser)
 8장 - (가능하면) Express로 SNS 서비스 만들기
