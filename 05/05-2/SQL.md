@@ -191,6 +191,12 @@ ALTER TABLE 테이블 명 DROP 컬럼 명;
 ex) ALTER TABLE user DROP nickName;
 ```
 
+### 테이블 삭제
+
+```
+drop 테이블 명;
+```
+
 ## CRUD 쿼리
 
 | 이름   | 조작 | SQL    |
