@@ -1,6 +1,6 @@
 # SQL
 
-이번 장에서는 SQL을 이용하여 사용자를 생성하고, CURD를 기본적으로 다뤄 보려 합니다.
+이번 장에서는 SQL을 이용하여 사용자를 생성하고, CRUD를 기본적으로 다뤄 보려 합니다.
 
 쿼리문 연습은 아래의 그림의 큰틀에서 부터 세부 내용까지 들어갑니다.
 ![DB](../05-1/Frame%209.png)
@@ -193,7 +193,7 @@ ex) ALTER TABLE user DROP nickName;
 
 ### 테이블 삭제
 
-```
+```SQL
 drop 테이블 명;
 ```
 
@@ -268,22 +268,22 @@ WHERE NOT 조건1;
 
 SELECT 컬럼1, 컬럼2, ...
 FROM 테이블 명
-WHERE 컬럼1 LIKE `A_`;
-컬럼의 값 중 A + 1글자 값을 가진 모든 행을 조회합니다. `A__`이면 A + 2글자 입니다.
+WHERE 컬럼1 LIKE 'A_';
+컬럼의 값 중 A + 1글자 값을 가진 모든 행을 조회합니다. 'A__'이면 A + 2글자 입니다.
 
 SELECT 컬럼1, 컬럼2, ...
 FROM 테이블 명
-WHERE 컬럼1 LIKE `A%`;
+WHERE 컬럼1 LIKE 'A%';
 컬럼의 값 중 A로 시작하는 모든 행을 조회합니다.
 
 SELECT 컬럼1, 컬럼2, ...
 FROM 테이블 명
-WHERE 컬럼1 LIKE `%A`;
+WHERE 컬럼1 LIKE '%A';
 컬럼의 값 중 A로 끝나는 모든 행을 조회합니다.
 
 SELECT 컬럼1, 컬럼2, ...
 FROM 테이블 명
-WHERE 컬럼1 LIKE `%A%`;
+WHERE 컬럼1 LIKE '%A%';
 컬럼의 값 중 A를 포함하는 모든 행을 조회합니다.
 
 SELECT 컬럼1, 컬럼2, ...
