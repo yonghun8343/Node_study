@@ -90,10 +90,16 @@ SELECT User, Host FROM mysql.user;
 생성한 사용자는 기본적으로 권한을 가지고 있지 않습니다. 그러므로 추가 권한을 부여 해야합니다. 여기서는 모든 권한을 다 주도록 하겠습니다.
 
 ```SQL
-GRANT ALL PRIVILEGES ON 'DB명'.* TO '사용자'@'접근';
+GRANT ALL PRIVILEGES ON DB명.* TO '사용자'@'접근';
 
 ex) GRANT ALL PRIVILEGES ON hscampus.* TO 'user'@'%';
 
+```
+
+### 부여한 권한 즉시 적용
+
+```SQL
+flush privileges;
 ```
 
 ## 테이블 관련 쿼리
