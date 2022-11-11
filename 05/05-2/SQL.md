@@ -92,7 +92,8 @@ SELECT User, Host FROM mysql.user;
 ```SQL
 GRANT ALL PRIVILEGES ON 'DB명'.* TO '사용자'@'접근';
 
-ex) GRANT ALL PRIVILEGES ON 'hscampus'.* TO 'user'@'%';
+ex) GRANT ALL PRIVILEGES ON hscampus.* TO 'user'@'%';
+
 ```
 
 ## 테이블 관련 쿼리
