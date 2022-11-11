@@ -97,7 +97,7 @@ clearImmediate(immediate2);
 
 ### \_\_filename, \_\_dirname
 
-노드에서는 파일 사이에 모듈 관계가 있는 경우가 있어 현재 ㅍ라일의 경로나 파일 명을 알아야 하는 경우가 있습니다. 노드는 **filename, **dirname이라는 키워드로 경로에 대한 정보를 제공 합니다.
+노드에서는 파일 사이에 모듈 관계가 있는 경우가 있어 현재 ㅍ라일의 경로나 파일 명을 알아야 하는 경우가 있습니다. 노드는 \_\_filename, \_\_dirname이라는 키워드로 경로에 대한 정보를 제공 합니다.
 
 ```javascript
 console.log(__filename);
