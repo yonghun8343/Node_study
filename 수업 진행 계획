@@ -4,7 +4,6 @@
 4장 - HTTP Method 및 상태값 설명
 5장 - MariaDB 설치 및 기본 개념
 6장 - MariaDB와 Node 연결
-7장 - Express 미들웨어(morgan, winston, router, body parser) 및 PM2
+7장 - PM2와 Express 미들웨어(morgan, winston, router, body parser)
 8장 - (가능하면) Express로 SNS 서비스 만들기
 9장 - Socket.io로 채팅방 만들기
-  

@@ -27,4 +27,6 @@ app.use("/users", usersRouter);
 - urlencoded를 통해 자동으로 시스템에 맞는 인코딩을 제공 해 줍니다.
 - routes를 통해 각 주소 별 역할에 맞게 url을 나누어 사용 할 수 있습니다.
 
+![middleware](./middleware.jpg)
+
 여기서 우리가 다음 장에서 중점으로 볼 것은 할 loggin, routes, body parser를 보려 합니다.
