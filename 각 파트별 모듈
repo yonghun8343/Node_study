@@ -1,0 +1,15 @@
+ - Javascript
+webpack -> es6를 es5로 번들링 babel과 함께 사용
+
+ - Node
+winston -> 로그 모듈
+dotenv -> 환경 변수 모듈
+eslint+prettier -> 코드 스타일 및 규칙
+pm2 -> 노드 프로세스 매니저
+
+ - Express
+router -> express 경로 분배
+logging -> express 간단한 로그
+
+ - Node_DB
+mariadb -> Node와 mariadb 연동
