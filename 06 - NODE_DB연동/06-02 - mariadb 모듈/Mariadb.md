@@ -44,7 +44,7 @@ createPool은 데이터베이스와 미리 연결을 설정한 옵션의 수 만
 
 ```javascript
 const mariadb = require("mariadb/callback");
-const poll = mariadb.createPool({
+const pool = mariadb.createPool({
   host: "localhost",
   user: "user",
   password: "users",
@@ -53,7 +53,7 @@ const poll = mariadb.createPool({
   connectionLimit: 5,
 });
 
-poll.query(`쿼리문`, (err, results, metadata) => {
+pool.query(`쿼리문`, (err, results, metadata) => {
   console.log(err);
   console.log(results);
   console.log(metadata);
