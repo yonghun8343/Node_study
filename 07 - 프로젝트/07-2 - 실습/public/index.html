@@ -18,31 +18,48 @@
         </div>
       </div>
       <div id="wrap-right">
-        <div id="wellcome">
-          <span> Welcome </span>
-          <span> Welcome! Please enter your details. </span>
-        </div>
-        <div id="id_pw">
-          <input type="text" id="id" placeholder="Email" />
-          <input type="password" id="pw" placeholder="Password" />
-        </div>
-        <div id="fn_box">
-          <div id="fn_box_left">
-            <input type="checkbox" id="remember" />
-            <span>Remember for 30 days</span>
+        <div id="login_box">
+          <div class="header">
+            <span> Welcome </span>
+            <span> Welcome! Please enter your details. </span>
           </div>
-          <div id="fn_box_right">
-            <span>Forgot password</span>
+          <div id="id_pw">
+            <input type="text" id="id" placeholder="Email" />
+            <input type="password" id="pw" placeholder="Password" />
+          </div>
+          <div id="fn_box">
+            <div id="fn_box_left">
+              <input type="checkbox" id="remember" />
+              <span>Remember for 30 days</span>
+            </div>
+            <div id="fn_box_right">
+              <span>Forgot password</span>
+            </div>
+          </div>
+          <div id="login_btn">
+            <span>Log in</span>
+          </div>
+          <div id="sign_box">
+            <span>Don’t have an account?</span>
+            <span id="sign_in">Sign up for free</span>
           </div>
         </div>
-        <div id="login_btn">
-          <span>Log in</span>
+        <div id="signup_box">
+          <div class="header">
+            <span> Find Password </span>
+            <span> Please enter your Email. </span>
+          </div>
+          <div id="id_pw">
+            <input type="text" id="email" placeholder="Email" />
+            <input type="text" id="pwd_valid" placeholder="6 Digit Number" />
+          </div>
+          <div id="submit_btn">
+            <span>Submit</span>
+          </div>
         </div>
-        <div>
-          <span>Don’t have an account?</span>
-          <span>Sign up for free</span>
-        </div>
+        <div id="pwd_box"></div>
       </div>
     </div>
+    <script src="./javascripts/index.js"></script>
   </body>
 </html>

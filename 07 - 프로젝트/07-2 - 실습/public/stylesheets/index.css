@@ -51,57 +51,65 @@
 #wrap-right {
   width: 50.6vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-#wrap-right span,
+.header span,
 #id_pw input,
 #id_pw,
 #fn_box,
-#login_btn {
+#login_btn,
+#submit_btn {
   min-width: 430px;
   width: 29.86vw;
 }
 
-#wellcome {
+.header {
   display: flex;
   flex-direction: column;
 }
 
-#wellcome span:nth-child(1) {
+.header span:nth-child(1) {
   font-family: "NotoSans";
   font-weight: 900;
   color: black;
   font-size: 2.5vw;
 }
 
-#wellcome span:nth-child(2) {
+.header span:nth-child(2) {
   font-family: "NotoSans";
   font-weight: normal;
   color: black;
   font-size: 1.73vw;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 #id,
-#pw {
+#pw,
+#email,
+#pwd_valid {
   height: 48px;
   border: none;
   border-bottom: 1px solid #e0e0e0;
+  font-size: 1.38vw;
 }
 
-#id {
+#id,
+#email {
   margin-top: 21px;
 }
 
-#pw {
+#pw,
+#pwd_valid {
   margin-top: 15px;
 }
 
 #id::placeholder,
-#pw::placeholder {
+#pw::placeholder,
+#email::placeholder
+#pwd_valid::placeholder {
   font-family: "NotoSans";
   font-weight: normal;
   font-size: 1.38vw;
@@ -109,7 +117,9 @@
 }
 
 #id:focus,
-#pw:focus {
+#pw:focus,
+#email:focus
+#pwd_valid:focus {
   outline: none;
 }
 
@@ -126,7 +136,8 @@
   cursor: pointer;
 }
 
-#login_btn {
+#login_btn,
+#submit_btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,12 +145,32 @@
   background-color: #060606;
   border-radius: 6px;
   margin-top: 60px;
+  cursor: pointer;
 }
 
-#login_btn span {
+#login_btn span,
+#submit_btn span {
   text-align: center;
   font-family: "NotoSans";
   font-weight: normal;
   font-size: 1.1vw;
   color: white;
+}
+
+#sign_box {
+  margin-top: 16px;
+  text-align: center;
+}
+
+#sign_box span:nth-child(2) {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#submit_btn {
+  transform: translateY(-96px);
+}
+
+#signup_box {
+  display: none;
 }
