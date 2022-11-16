@@ -1,15 +1,14 @@
 <html>
   <head>
     <title>Express</title>
-    <!-- <link rel="stylesheet" href="/stylesheets/style.css" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./stylesheets/index.css" />
   </head>
 
   <body>
     <div class="wrap">
-      <div id="wrap-left">
-        <div id="wrap-left-text">
+      <div class="wrap-left">
+        <div class="wrap-left-text">
           <span>Turn your ideas</span>
           <span>into reality</span>
           <span
@@ -17,47 +16,48 @@
           >
         </div>
       </div>
-      <div id="wrap-right">
-        <div id="login_box">
-          <div class="header">
-            <span> Welcome </span>
-            <span> Welcome! Please enter your details. </span>
+      <div class="wrap-right">
+        <div class="login-box">
+          <div class="login-box-text">
+            <span>Welcome</span>
+            <span>Welcom! Please endter your details.</span>
           </div>
-          <div id="id_pw">
+          <div class="id-pw">
             <input type="text" id="id" placeholder="Email" />
             <input type="password" id="pw" placeholder="Password" />
           </div>
-          <div id="fn_box">
-            <div id="fn_box_left">
+          <div class="fn_box">
+            <div class="fn_box_left">
               <input type="checkbox" id="remember" />
-              <span>Remember for 30 days</span>
+              <span> Remember for 30 days </span>
             </div>
-            <div id="fn_box_right">
-              <span>Forgot password</span>
+            <div class="fn_box_right">
+              <span>Forgot Password</span>
             </div>
           </div>
-          <div id="login_btn">
+          <div class="login_btn">
+            <!-- // 기존 수업에서 login_box로 함. 수정 필요 -->
             <span>Log in</span>
           </div>
-          <div id="sign_box">
+          <div class="sign_box">
             <span>Don’t have an account?</span>
-            <span id="sign_in">Sign up for free</span>
+            <span>Sign up for free</span>
           </div>
         </div>
-        <div id="signup_box">
+        <div class="signup_box">
           <div class="header">
             <span> Find Password </span>
             <span> Please enter your Email. </span>
           </div>
-          <div id="id_pw">
+          <div class="id-pw">
             <input type="text" id="email" placeholder="Email" />
             <input type="text" id="pwd_valid" placeholder="6 Digit Number" />
           </div>
-          <div id="submit_btn">
+          <div class="submit_btn">
             <span>Submit</span>
           </div>
         </div>
-        <div id="pwd_box"></div>
+        <div class="pwd_box"></div>
       </div>
     </div>
     <script src="./javascripts/index.js"></script>

@@ -7,83 +7,85 @@
   flex-direction: row;
 }
 
-#wrap-left {
+.wrap-left {
   width: 49.4vw;
   height: 100vh;
   background-size: cover;
   background-image: url(../images/Rectangle\ 1.svg);
 }
 
-#wrap-left-text {
+.wrap-left-text {
   display: flex;
-  height: 94vh;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: end;
   align-items: center;
+  height: 94vh;
 }
 
-#wrap-left-text span {
-  width: 77%;
+.wrap-left-text span {
+  width: 74.85%;
 }
 
-#wrap-left-text span:nth-child(1) {
+.wrap-left-text span:nth-child(1),
+.wrap-left-text span:nth-child(2) {
   font-family: "NotoSans";
   font-weight: 900;
-  font-size: 2.7vw;
+  font-size: 2.77vw;
   color: #ffffff;
 }
 
-#wrap-left-text span:nth-child(2) {
-  font-family: "NotoSans";
-  font-weight: 900;
-  font-size: 2.7vw;
-  color: #ffffff;
+.wrap-left-text span:nth-child(2) {
+  margin-top: 10px;
 }
 
-#wrap-left-text span:nth-child(3) {
-  margin-top: 20px;
+.wrap-left-text span:nth-child(3) {
   font-family: "NotoSans";
   font-weight: normal;
-  font-size: 1.35vw;
+  font-size: 1.38vw;
   color: #ffffff;
+  margin-top: 20px;
 }
 
-#wrap-right {
-  width: 50.6vw;
+.wrap-right {
+  width: 50.56vw;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.header span,
-#id_pw input,
-#id_pw,
-#fn_box,
-#login_btn,
-#submit_btn {
-  min-width: 430px;
-  width: 29.86vw;
-}
-
-.header {
+.login-box {
   display: flex;
   flex-direction: column;
 }
 
-.header span:nth-child(1) {
-  font-family: "NotoSans";
-  font-weight: 900;
-  color: black;
-  font-size: 2.5vw;
+/* // login_box -> login_btn 수정 */
+.login-box,
+.signup_box,
+.login-box-text span,
+.id-pw input,
+.fn_box,
+.login_btn,
+.sign_box,
+.submit_btn {
+  min-width: 430px;
+  width: 59.06%;
 }
 
-.header span:nth-child(2) {
+.login-box-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box-text span:nth-child(1) {
+  font-family: "NotoSans";
+  font-weight: 900;
+  font-size: 2.5vw;
+}
+.login-box-text span:nth-child(2) {
   font-family: "NotoSans";
   font-weight: normal;
-  color: black;
-  font-size: 1.73vw;
-  margin-top: 15px;
+  font-size: 1.38vw;
+  margin-top: 12px;
 }
 
 #id,
@@ -108,8 +110,7 @@
 
 #id::placeholder,
 #pw::placeholder,
-#email::placeholder
-#pwd_valid::placeholder {
+#email::placeholder #pwd_valid::placeholder {
   font-family: "NotoSans";
   font-weight: normal;
   font-size: 1.38vw;
@@ -118,12 +119,11 @@
 
 #id:focus,
 #pw:focus,
-#email:focus
-#pwd_valid:focus {
+#email:focus #pwd_valid:focus {
   outline: none;
 }
 
-#fn_box {
+.fn_box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -131,46 +131,71 @@
   margin-top: 17px;
 }
 
-#fn_box_right span {
+.fn_box_left span {
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.04vw;
+}
+
+.fn_box_right span {
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.04vw;
   text-decoration: underline;
   cursor: pointer;
 }
 
-#login_btn,
-#submit_btn {
+.login_btn,
+/* // login_box -> login_btn 수정 */
+.submit_btn {
+  margin-top: 61px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
   background-color: #060606;
   border-radius: 6px;
-  margin-top: 60px;
   cursor: pointer;
 }
 
-#login_btn span,
-#submit_btn span {
-  text-align: center;
+.login_btn span,
+/* // login_box -> login_btn 수정 */
+.submit_btn span {
   font-family: "NotoSans";
   font-weight: normal;
-  font-size: 1.1vw;
+  font-size: 1.11vw;
   color: white;
 }
 
-#sign_box {
+.sign_box {
   margin-top: 16px;
   text-align: center;
 }
 
-#sign_box span:nth-child(2) {
+.sign_box span:nth-child(1) {
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.11vw;
+}
+
+.sign_box span:nth-child(2) {
+  font-family: "NotoSans";
+  font-weight: 500;
+  font-size: 1.11vw;
   text-decoration: underline;
   cursor: pointer;
 }
 
-#submit_btn {
+.fn_box_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit_btn {
   transform: translateY(-96px);
 }
 
-#signup_box {
+.signup_box {
   display: none;
 }

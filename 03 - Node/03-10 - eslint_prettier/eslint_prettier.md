@@ -74,7 +74,17 @@ npm install --save-dev --save-exact prettier
 
 ```json
 {
-  "extends": ["some-other-config-you-use", "plugin:prettier/recommended"]
+  "extends": ["some-other-config-you-use", "plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": false,
+        "parser": "flow",
+        "endOfLine": "LF"
+      }
+    ]
+  }
 }
 ```
 

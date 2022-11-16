@@ -1,18 +1,20 @@
-document.getElementById("submit_btn").addEventListener("click", () => {
-  const validBox = document.getElementById("pwd_valid");
-  const submitBox = document.getElementById("submit_btn");
+document
+  .getElementsByClassName("submit_btn")[0]
+  .addEventListener("click", () => {
+    const validBox = document.getElementById("pwd_valid");
+    const submitBox = document.getElementsByClassName("submit_btn")[0];
 
-  validBox.style.display = "block";
-  validBox.style.transition = "transform 1s ease-in-out";
-  validBox.style.transform = "translateY(0px)";
+    validBox.style.display = "block";
+    validBox.style.transition = "transform 1s ease-in-out";
+    validBox.style.transform = "translateY(0px)";
 
-  submitBox.style.transition = "transform 1s ease-in-out";
-  submitBox.style.transform = "translateY(0px)";
-});
+    submitBox.style.transition = "transform 1s ease-in-out";
+    submitBox.style.transform = "translateY(0px)";
+  });
 
-document.getElementById("sign_in").addEventListener("click", () => {
-  const loginBox = document.getElementById("login_box");
-  const singup = document.getElementById("signup_box");
+document.getElementsByClassName("sign_box")[0].addEventListener("click", () => {
+  const loginBox = document.getElementsByClassName("login-box")[0];
+  const singup = document.getElementsByClassName("signup_box")[0];
 
   loginBox.style.transition = "all 1s linear";
   loginBox.style.transform = "scale(0.5)";
