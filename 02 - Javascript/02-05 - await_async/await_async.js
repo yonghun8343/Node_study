@@ -2,7 +2,7 @@
 const wait = (timeToDelay) =>
   new Promise((resolve) => setTimeout(resolve, timeToDelay));
 
-// await을 통해 1초 기다리는 것을 동기로 수행
+// // await을 통해 1초 기다리는 것을 동기로 수행
 async function sum(a, b) {
   await wait(1000);
   return a + b;
@@ -34,3 +34,26 @@ sum(1, 2)
   .then((val2) => {
     console.log(val2);
   });
+
+// async function promise() {
+//   try {
+//     return true;
+//   } catch (error) {
+//     throw new Error(erorr);
+//   }
+// }
+
+// const wait2 = (time) => {
+//   new Promise((resolve) => {
+//     setTimeout(resolve, time);
+//   });
+// };
+
+// async function sum(a, b) {
+//   await wait2(1000);
+//   return a + b;
+// }
+
+// sum(1, 2).then((val) => {
+//   console.log(val);
+// });

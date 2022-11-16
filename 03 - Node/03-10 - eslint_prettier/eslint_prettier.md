@@ -66,13 +66,15 @@ prettier와 eslint에서의 규칙이 중복되는것을 막기 위해서 eslint
 
 ```bash
 npm i -D eslint-config-prettier
+npm install --save-dev eslint-plugin-prettier
+npm install --save-dev --save-exact prettier
 ```
 
 그리고 기존에 설정했던 eslintrc파일에 해당 내용을 추가 해 줍니다.
 
 ```json
 {
-  "extends": ["some-other-config-you-use", "prettier"]
+  "extends": ["some-other-config-you-use", "plugin:prettier/recommended"]
 }
 ```
 
