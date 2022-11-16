@@ -59,10 +59,10 @@
 }
 
 /* // login_box -> login_btn 수정 */
-.login-box,
-.signup_box,
-.login-box-text span,
-.id-pw input,
+.wrap-right-box,
+.header span,
+.input-box input,
+.sign-info input,
 .fn_box,
 .login_btn,
 .sign_box,
@@ -71,55 +71,91 @@
   width: 59.06%;
 }
 
-.login-box-text {
+.header {
   display: flex;
   flex-direction: column;
 }
 
-.login-box-text span:nth-child(1) {
+.header span:nth-child(1) {
   font-family: "NotoSans";
   font-weight: 900;
   font-size: 2.5vw;
 }
-.login-box-text span:nth-child(2) {
+
+.header span:nth-child(2) {
   font-family: "NotoSans";
   font-weight: normal;
   font-size: 1.38vw;
   margin-top: 12px;
 }
 
-#id,
-#pw,
-#email,
-#pwd_valid {
+/* #id, */
+/* #pw,
+.email,
+.email_valid,
+.sign-info input {
+  height: 48px;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.38vw;
+} */
+
+.input-box input {
   height: 48px;
   border: none;
   border-bottom: 1px solid #e0e0e0;
   font-size: 1.38vw;
 }
 
-#id,
+/* #id,
 #email {
+  margin-top: 21px;
+} */
+
+.input-box input:nth-child(1) {
   margin-top: 21px;
 }
 
-#pw,
-#pwd_valid {
+.input-box input:not(:nth-child(1)),
+.sign-info input {
   margin-top: 15px;
 }
 
-#id::placeholder,
+/* 
+#pw,
+#valid,
+.sign-info input {
+  margin-top: 15px;
+} */
+
+/* #id::placeholder,
 #pw::placeholder,
-#email::placeholder #pwd_valid::placeholder {
+#email::placeholder,
+#valid::placeholder,
+.sign-info input::placeholder {
+  font-family: "NotoSans";
+  font-weight: normal;
+  font-size: 1.38vw;
+  color: #000000;
+} */
+
+.input-box input::placeholder {
   font-family: "NotoSans";
   font-weight: normal;
   font-size: 1.38vw;
   color: #000000;
 }
 
-#id:focus,
+/* #id:focus,
 #pw:focus,
-#email:focus #pwd_valid:focus {
+#email:focus,
+#valid:focus,
+.sign-info input:focus {
+  outline: none;
+} */
+
+/* 위에꺼 밑으로 수정 */
+.input-box input:focus {
   outline: none;
 }
 
@@ -192,10 +228,62 @@
   align-items: center;
 }
 
-.submit_btn {
-  transform: translateY(-96px);
+#signup-submit {
+  transform: translateY(-295px);
 }
 
+#find-submit {
+  transform: translateY(-95px);
+}
+
+/* 테스트를 위해 작성 */
+
+.login-box {
+  display: none;
+}
 .signup_box {
   display: none;
+}
+
+/* .find_box {
+  display: none;
+} */
+
+#sign_pw,
+#sign_name,
+#sign_nick {
+  visibility: hidden;
+}
+
+.icono-arrow1-left {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.icono-arrow1-left::after,
+.icono-arrow1-left::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 3px;
+}
+.icono-arrow1-left::after {
+  width: 16px;
+  height: 16px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  bottom: 7px;
+}
+.icono-arrow1-left::before {
+  width: 24px;
+  height: 2px;
+  bottom: 14px;
+  background: currentColor;
 }
