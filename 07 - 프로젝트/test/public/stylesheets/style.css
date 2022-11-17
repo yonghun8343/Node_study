@@ -178,3 +178,45 @@
 .find_box {
   display: none;
 }
+
+.icono-arrow1-left {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.icono-arrow1-left::after,
+.icono-arrow1-left::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 3px;
+}
+.icono-arrow1-left::after {
+  width: 16px;
+  height: 16px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  bottom: 7px;
+}
+.icono-arrow1-left::before {
+  width: 24px;
+  height: 2px;
+  bottom: 14px;
+  background: currentColor;
+}
+
+#find_valid,
+#find_pwd {
+  visibility: hidden;
+}
+
+#find_submit {
+  transform: translateY(-175px);
+}
