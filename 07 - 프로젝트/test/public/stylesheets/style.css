@@ -212,11 +212,18 @@
   background: currentColor;
 }
 
-#find_valid,
-#find_pwd {
+.visi-hidden {
   visibility: hidden;
 }
 
 #find_submit {
   transform: translateY(-175px);
+}
+
+.signup-box {
+  display: none;
+}
+
+#signup-submit {
+  transform: translateY(-300px);
 }

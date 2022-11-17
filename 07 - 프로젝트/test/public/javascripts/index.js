@@ -61,3 +61,77 @@ document.getElementById("find_submit").addEventListener("click", () => {
     submitBtn.style.transform = "translateY(0px)";
   }
 });
+
+document.getElementById("sign-up").addEventListener("click", () => {
+  const loginBox = document.getElementsByClassName("login-box")[0];
+  const signBox = document.getElementsByClassName("signup-box")[0];
+
+  loginBox.style.transition = "all 1s linear";
+  loginBox.style.transform = "scale(0.5)";
+  loginBox.style.opacity = 0;
+  setTimeout(() => {
+    loginBox.style.display = "none";
+  }, 1000);
+
+  setTimeout(() => {
+    signBox.style.display = "block";
+    signBox.style.opacity = 0;
+    signBox.style.transform = "scale(0.5)";
+  }, 1100);
+
+  setTimeout(() => {
+    signBox.style.transition = "all 1s linear";
+    signBox.style.opacity = 1;
+    signBox.style.transform = "scale(1)";
+  }, 1200);
+});
+
+document.getElementById("signup-arrow").addEventListener("click", () => {
+  const loginBox = document.getElementsByClassName("login-box")[0];
+  const signBox = document.getElementsByClassName("signup-box")[0];
+
+  signBox.style.transition = "all 1s linear";
+  signBox.style.transform = "scale(0.5)";
+  signBox.style.opacity = 0;
+  setTimeout(() => {
+    signBox.style.display = "none";
+  }, 1000);
+
+  setTimeout(() => {
+    loginBox.style.display = "block";
+    loginBox.style.opacity = 0;
+    loginBox.style.transform = "scale(0.5)";
+  }, 1100);
+
+  setTimeout(() => {
+    loginBox.style.transition = "all 1s linear";
+    loginBox.style.opacity = 1;
+    loginBox.style.transform = "scale(1)";
+  }, 1200);
+});
+
+document.getElementById("signup-submit").addEventListener("click", () => {
+  const submitBtn = document.getElementById("signup-submit");
+
+  submitBtn.style.transition = "transform 1s linear";
+
+  if (document.getElementById("sign_email").value) {
+    document.getElementById("sign_valid").style.visibility = "visible";
+    submitBtn.style.transform = "translateY(-240px)";
+  }
+
+  if (document.getElementById("sign_valid").value.length === 6) {
+    document.getElementById("sign_pw").style.visibility = "visible";
+    submitBtn.style.transform = "translateY(-175px)";
+
+    setTimeout(() => {
+      document.getElementById("sign_name").style.visibility = "visible";
+      submitBtn.style.transform = "translateY(-115px)";
+    }, 900);
+
+    setTimeout(() => {
+      document.getElementById("sign_nick").style.visibility = "visible";
+      submitBtn.style.transform = "translateY(-25px)";
+    }, 1800);
+  }
+});

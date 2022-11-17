@@ -41,7 +41,7 @@
           </div>
           <div class="sign_box">
             <span>Don’t have an account?</span>
-            <span>Sign up for free</span>
+            <span id="sign-up">Sign up for free</span>
           </div>
         </div>
         <div class="wrap-right-box find_box">
@@ -55,10 +55,16 @@
             <input
               type="text"
               id="find_valid"
+              class="visi-hidden"
               placeholder="6 Digit Number"
               maxlength="6"
             />
-            <input type="password" id="find_pwd" placeholder="New Password" />
+            <input
+              type="password"
+              id="find_pwd"
+              class="visi-hidden"
+              placeholder="New Password"
+            />
           </div>
           <div class="submit-btn" id="find_submit">
             <span>Submit</span>
@@ -75,9 +81,31 @@
             <input
               type="text"
               id="sign_valid"
+              class="visi-hidden"
               maxlength="6"
               placeholder="6 Digit Number"
             />
+            <input
+              type="text"
+              id="sign_pw"
+              class="visi-hidden"
+              placeholder="새 비밀번호"
+            />
+            <input
+              type="text"
+              id="sign_name"
+              class="visi-hidden"
+              placeholder="이름"
+            />
+            <input
+              type="text"
+              id="sign_nick"
+              class="visi-hidden"
+              placeholder="닉네임"
+            />
+          </div>
+          <div class="submit-btn" id="signup-submit">
+            <span>Submit</span>
           </div>
         </div>
       </div>
