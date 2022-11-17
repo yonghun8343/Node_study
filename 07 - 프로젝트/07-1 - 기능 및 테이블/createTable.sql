@@ -4,7 +4,7 @@ CREATE TABLE `hscampus`.`user` (
   `u_pwd` INT NOT NULL,
   `u_nick` INT NOT NULL,
   `u_date` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`u_id`),)
+  PRIMARY KEY (`u_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 

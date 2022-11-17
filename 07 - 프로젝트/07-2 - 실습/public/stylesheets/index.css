@@ -10,6 +10,7 @@
   width: 49.44vw;
   height: 100vh;
   background-image: url(../images/Rectangle\ 1.svg);
+  background-size: cover;
 }
 
 .wrap-left-text span:nth-child(1),

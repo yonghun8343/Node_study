@@ -110,19 +110,27 @@ document.getElementById("signup-arrow").addEventListener("click", () => {
   }, 1200);
 });
 
+let condition = 0;
 document.getElementById("signup-submit").addEventListener("click", () => {
   const submitBtn = document.getElementById("signup-submit");
 
   submitBtn.style.transition = "transform 1s linear";
 
-  if (document.getElementById("sign_email").value) {
+  if (document.getElementById("sign_email").value && condition === 0) {
+    condition += 1;
     document.getElementById("sign_valid").style.visibility = "visible";
     submitBtn.style.transform = "translateY(-240px)";
   }
 
-  if (document.getElementById("sign_valid").value.length === 6) {
+  if (
+    document.getElementById("sign_valid").value.length === 6 &&
+    condition === 1
+  ) {
+    condition += 1;
     document.getElementById("sign_pw").style.visibility = "visible";
     submitBtn.style.transform = "translateY(-175px)";
+
+    console.log("2222222222222222");
 
     setTimeout(() => {
       document.getElementById("sign_name").style.visibility = "visible";
