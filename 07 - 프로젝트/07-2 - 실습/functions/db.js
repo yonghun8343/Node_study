@@ -1,33 +1,28 @@
-import mariadb from "mariadb";
+const nodemailer = require("nodemailer");
 
-async function asyncSQL(sql) {
-  const conn = await mariadb.createConnection({
-    host: process.env.host,
-    user: process.env.user,
-    password: process.env.password,
-    port: process.env.port,
-    database: process.env.database,
+async function sendMail(email, digit) {
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    post: 465,
+    secure: true,
+    auth: {
+      user: process.env.MAIL_ID,
+      pass: process.env.MAIL_PASSWORD,
+    },
   });
 
-  try {
-    const res = await conn.query(sql);
-    return res;
-  } catch (error) {
-    throw new Error("에러가 발생 했습니다.");
-  } finally {
-    conn.end();
-  }
+  const mailOptions = {
+    from: process.env.MAIL_ID,
+    to: email,
+    subject: "이메일 인증을 해 주세요.",
+    text: `당신의 인증 번호는 ${digit}입니다.`,
+  };
+
+  await transporter.sendMail(mailOptions);
 }
 
-export default asyncSQL;
+function randomNumber() {
+  return Math.floor(Math.random() * (999999 - 100000) + 100000);
+}
 
-
-// 저장용
-// CREATE TABLE `hscampus`.`auth` (
-//   `a_id` INT NOT NULL AUTO_INCREMENT,
-//   `a_email` VARCHAR(255) NOT NULL,
-//   `a_digit` INT(11) NOT NULL,
-//   `a_dae` TIMESTAMP NULL DEFAULT current_timestamp,
-//   PRIMARY KEY (`a_id`))
-// ENGINE = InnoDB
-// DEFAULT CHARACTER SET = utf8;
+module.exports = { sendMail, randomNumber };
