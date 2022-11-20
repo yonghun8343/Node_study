@@ -50,7 +50,7 @@ POST요청을 보낼 때
   }
   xhr.onreadystatechange = function() {
     if(xhr.readyState === xhr.DONE) {
-      if(xhr.status === 200 || xhr.status = 201) {
+      if(xhr.status === 200 || xhr.status === 201) {
         console.log(xhr.responseText);
       } else {
         console.error(xhr.responseText);
