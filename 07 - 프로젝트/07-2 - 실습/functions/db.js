@@ -1,28 +1,41 @@
-const nodemailer = require("nodemailer");
+const mariadb = require("mariadb/callback");
 
-async function sendMail(email, digit) {
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    post: 465,
-    secure: true,
-    auth: {
-      user: process.env.MAIL_ID,
-      pass: process.env.MAIL_PASSWORD,
-    },
+// callback을 변수의 마지막에 넣어 해당 결과값을 callback으로 반환한다고 선언 해 줍니다.
+function asyncSQL(sql, callback) {
+  const conn = mariadb.createConnection({
+    host: process.env.host,
+    user: process.env.user,
+    password: process.env.password,
+    port: process.env.dbport,
+    database: process.env.database,
   });
 
-  const mailOptions = {
-    from: process.env.MAIL_ID,
-    to: email,
-    subject: "이메일 인증을 해 주세요.",
-    text: `당신의 인증 번호는 ${digit}입니다.`,
-  };
-
-  await transporter.sendMail(mailOptions);
+  conn.query(sql, (err, rows) => {
+    // 아래의 callback에서 결과값을 반환 합니다.
+    callback(err, rows);
+    conn.end();
+  });
 }
 
-function randomNumber() {
-  return Math.floor(Math.random() * (999999 - 100000) + 100000);
-}
+// 해당 프로젝트 코드에는 해당 주석을 삭제 하였으나 여기에는 남겨 두겠습니다.
+// async function asyncSQL(sql) {
+//   const conn = await mariadb.createConnection({
+//     host: process.env.host,
+//     user: "root",
+//     password: "root",
+//     port: process.env.dbport,
+//     database: process.env.database,
+//   });
 
-module.exports = { sendMail, randomNumber };
+//   try {
+//     const res = await conn.query(sql);
+//     return res;
+//   } catch (error) {
+//     console.log(error);
+//     throw new Error("에러가 발생 했습니다.");
+//   } finally {
+//     conn.end();
+//   }
+// }
+
+module.exports = asyncSQL;
