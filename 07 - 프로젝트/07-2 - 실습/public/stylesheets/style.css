@@ -1,4 +1,3 @@
-@charset "utf-8";
 @import "reset.css";
 @import "font.css";
 
@@ -8,22 +7,9 @@
 }
 
 .wrap-left {
-  width: 49.4vw;
+  width: 49.44vw;
   height: 100vh;
-  background-size: cover;
   background-image: url(../images/Rectangle\ 1.svg);
-}
-
-.wrap-left-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  height: 94vh;
-}
-
-.wrap-left-text span {
-  width: 74.85%;
 }
 
 .wrap-left-text span:nth-child(1),
@@ -46,6 +32,18 @@
   margin-top: 20px;
 }
 
+.wrap-left-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 94vh;
+}
+
+.wrap-left-text span {
+  width: 74.85%;
+}
+
 .wrap-right {
   width: 50.56vw;
   display: flex;
@@ -53,20 +51,17 @@
   align-items: center;
 }
 
-.login-box {
+.wrap-right-box {
   display: flex;
   flex-direction: column;
 }
 
-/* // login_box -> login_btn 수정 */
 .wrap-right-box,
 .header span,
 .input-box input,
-.sign-info input,
 .fn_box,
-.login_btn,
-.sign_box,
-.submit-btn {
+.login_box,
+.sign_box {
   min-width: 430px;
   width: 59.06%;
 }
@@ -81,7 +76,6 @@
   font-weight: 900;
   font-size: 2.5vw;
 }
-
 .header span:nth-child(2) {
   font-family: "NotoSans";
   font-weight: normal;
@@ -89,17 +83,7 @@
   margin-top: 12px;
 }
 
-/* #id, */
-/* #pw,
-.email,
-.email_valid,
-.sign-info input {
-  height: 48px;
-  border: none;
-  border-bottom: 1px solid #e0e0e0;
-  font-size: 1.38vw;
-} */
-
+/* #id, #pw */
 .input-box input {
   height: 48px;
   border: none;
@@ -107,37 +91,18 @@
   font-size: 1.38vw;
 }
 
-/* #id,
-#email {
-  margin-top: 21px;
-} */
-
 .input-box input:nth-child(1) {
   margin-top: 21px;
 }
 
-.input-box input:not(:nth-child(1)),
-.sign-info input {
+/* 1번말고 나머지는 margin-top: 15px */
+.input-box input:not(:nth-child(1)) {
   margin-top: 15px;
 }
 
-/* 
-#pw,
-#valid,
-.sign-info input {
-  margin-top: 15px;
-} */
-
-/* #id::placeholder,
-#pw::placeholder,
-#email::placeholder,
-#valid::placeholder,
-.sign-info input::placeholder {
-  font-family: "NotoSans";
-  font-weight: normal;
-  font-size: 1.38vw;
-  color: #000000;
-} */
+.input-box input:focus {
+  outline: none;
+}
 
 .input-box input::placeholder {
   font-family: "NotoSans";
@@ -146,25 +111,11 @@
   color: #000000;
 }
 
-/* #id:focus,
-#pw:focus,
-#email:focus,
-#valid:focus,
-.sign-info input:focus {
-  outline: none;
-} */
-
-/* 위에꺼 밑으로 수정 */
-.input-box input:focus {
-  outline: none;
-}
-
 .fn_box {
+  margin-top: 17px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 17px;
 }
 
 .fn_box_left span {
@@ -181,8 +132,6 @@
   cursor: pointer;
 }
 
-.login_btn,
-/* // login_box -> login_btn 수정 */
 .submit-btn {
   margin-top: 61px;
   display: flex;
@@ -194,8 +143,6 @@
   cursor: pointer;
 }
 
-.login_btn span,
-/* // login_box -> login_btn 수정 */
 .submit-btn span {
   font-family: "NotoSans";
   font-weight: normal;
@@ -228,31 +175,8 @@
   align-items: center;
 }
 
-#signup-submit {
-  transform: translateY(-295px);
-}
-
-#find-submit {
-  transform: translateY(-95px);
-}
-
-/* 테스트를 위해 작성 */
-
-.login-box {
+.find_box {
   display: none;
-}
-.signup_box {
-  display: none;
-}
-
-/* .find_box {
-  display: none;
-} */
-
-#sign_pw,
-#sign_name,
-#sign_nick {
-  visibility: hidden;
 }
 
 .icono-arrow1-left {
@@ -286,4 +210,20 @@
   height: 2px;
   bottom: 14px;
   background: currentColor;
+}
+
+.visi-hidden {
+  visibility: hidden;
+}
+
+#find_submit {
+  transform: translateY(-175px);
+}
+
+.signup-box {
+  display: none;
+}
+
+#signup-submit {
+  transform: translateY(-300px);
 }

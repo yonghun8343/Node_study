@@ -1,0 +1,90 @@
+@import "reset.css";
+@import "font.css";
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrap-left {
+  width: 30vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrap-left span {
+  font-family: "NotoSans";
+  font-size: 3vw;
+  font-weight: normal;
+}
+
+.wrap-left div:first-child {
+  margin-top: 30px;
+}
+
+.wrap-left div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.wrap-left div > span {
+  cursor: pointer;
+}
+
+.wrap-left-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #eff3f4;
+  padding: 20px;
+  border-radius: 100px;
+}
+
+.wrap-left-search img {
+  width: 15px;
+  height: 15px;
+}
+
+.wrap-left-search input {
+  border: none;
+  margin-left: 10px;
+  background: none;
+}
+
+.wrap-left-search input:focus {
+  outline: none;
+}
+
+.wrap-right {
+  width: 70vw;
+  height: 100vh;
+}
+
+.wrap-right-top {
+  width: 80%;
+  height: 300px;
+  background-color: #eff3f4;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#desc {
+  margin: 30px 30px 0 30px;
+  height: 220px;
+}
+
+#desc-btn {
+  height: 30px;
+  width: 100px;
+  background-color: #1d9bf0;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 73%;
+  margin-top: 7px;
+}
