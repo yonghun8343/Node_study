@@ -348,7 +348,6 @@ document.getElementById("login_btn").addEventListener("click", () => {
         sessionStorage.setItem("name", response.info.name);
         sessionStorage.setItem("nick", response.info.nick);
 
-        console.log(response);
         dongledongle();
       } else {
         // response.status === "fail
@@ -376,3 +375,9 @@ function dongledongle() {
     document.getElementById("dongle").style.display = "none";
   }
 }
+
+document.getElementById("pw").addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    document.getElementById("login_btn").click();
+  }
+});

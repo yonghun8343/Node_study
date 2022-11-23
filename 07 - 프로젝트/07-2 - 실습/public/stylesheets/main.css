@@ -64,19 +64,22 @@
 
 .wrap-right-top {
   width: 80%;
-  height: 300px;
   background-color: #eff3f4;
   border-radius: 50px;
   display: flex;
   flex-direction: column;
+  padding: 30px;
 }
 
 #desc {
-  margin: 30px 30px 0 30px;
   height: 220px;
 }
 
-#desc-btn {
+.text {
+  resize: none;
+}
+
+.submit-btn {
   height: 30px;
   width: 100px;
   background-color: #1d9bf0;
@@ -85,6 +88,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 73%;
-  margin-top: 7px;
+}
+
+#desc-btn {
+  margin-top: 20px;
+  float: right;
+}
+
+.wrap-right-bottom {
+  margin-top: 30px;
+}
+
+.board-content {
+  width: 80%;
+  background-color: #eff3f4;
+  border-radius: 50px;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-middle {
+  margin-top: 30px;
+}
+
+.comment-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
