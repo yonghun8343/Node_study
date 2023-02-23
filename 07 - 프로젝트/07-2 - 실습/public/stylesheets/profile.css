@@ -1,0 +1,33 @@
+@import "reset.css";
+@import "font.css";
+@import "main.css";
+@import "detail.css";
+
+.profile-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nick {
+  font-family: "NotoSans";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.profile-content-btn {
+  width: 100px;
+  height: 34px;
+  border: 1px solid #cfd9de;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}

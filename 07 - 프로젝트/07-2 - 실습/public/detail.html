@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel="stylesheet" href="/stylesheets/detail.css" />
 </head>
 
 <body>
@@ -31,18 +31,29 @@
         </div>
         <div class="wrap-right">
             <div class="wrap-right-top">
-                <!-- <input type="text" id="desc" /> -->
-                <textarea class="text" id="desc"></textarea>
-                <div class="btn-wrap">
-                    <div class="submit-btn" id="desc-btn">
-                        <span>Submit</span>
+                <div class="comment-content">
+                    <span id="nick"></span>
+                    <span id="date"></span>
+                </div>
+                <div class="comment-middle">
+                    <span id="content"></span>
+                </div>
+                <div class="comment-bottom">
+                    <textarea class="text" id="comm"></textarea>
+                    <div class="btn-wrap">
+                        <div class="submit-btn" id="comment-btn">
+                            <span>댓글 쓰기</span>
+                        </div>
                     </div>
                 </div>
+                <div class="comment-box"></div>
+                <div class="comment-more">
+                    <span>댓글 5개 더 보기</span>
+                </div>
             </div>
-            <div class="wrap-right-bottom"></div>
         </div>
     </div>
-    <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/detail.js"></script>
 </body>
 
 </html>

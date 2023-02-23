@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
 </head>
 
 <body>
@@ -31,18 +31,35 @@
         </div>
         <div class="wrap-right">
             <div class="wrap-right-top">
-                <!-- <input type="text" id="desc" /> -->
-                <textarea class="text" id="desc"></textarea>
-                <div class="btn-wrap">
-                    <div class="submit-btn" id="desc-btn">
-                        <span>Submit</span>
+                <div class="profile-content">
+                    <span id="nick">이름</span>
+                    <div class="profile-content-btn">
+                        <span>팔로우</span>
                     </div>
                 </div>
+                <div class="profile-middle">
+                    <div>
+                        <span class="count" id="follower-count"></span>
+                        <span>팔로워</span>
+                    </div>
+                    <div>
+                        <span class="count" id="following-count"></span>
+                        <span>팔로잉</span>
+                    </div>
+                    <div id="write">
+                        <span class="count" id="write-count"></span>
+                        <span>게시물</span>
+                    </div>
+                    <div id="comm">
+                        <span class="count" id="comm-count"></span>
+                        <span>댓글</span>
+                    </div>
+                </div>
+                <div class="profile-bottom"></div>
             </div>
-            <div class="wrap-right-bottom"></div>
         </div>
     </div>
-    <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/profile.js"></script>
 </body>
 
 </html>

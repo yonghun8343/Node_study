@@ -1,0 +1,36 @@
+@import "reset.css";
+@import "font.css";
+@import "main.css";
+@import "detail.css";
+
+.message-box {
+  margin-top: 30px;
+}
+
+.MY-message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.MY-message div {
+  background-color: yellow;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.UR-message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.UR-message div {
+  background-color: gray;
+  border-radius: 20px;
+  padding: 10px;
+}

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel="stylesheet" href="/stylesheets/chat.css" />
 </head>
 
 <body>
@@ -31,18 +31,24 @@
         </div>
         <div class="wrap-right">
             <div class="wrap-right-top">
-                <!-- <input type="text" id="desc" /> -->
-                <textarea class="text" id="desc"></textarea>
-                <div class="btn-wrap">
-                    <div class="submit-btn" id="desc-btn">
-                        <span>Submit</span>
-                    </div>
+                <button id="connect">연결</button>
+                <div>
+                    <input type="text" id="room-text" />
+                    <button id="join">입장</button>
+                    <button id="leave">나가기</button>
                 </div>
+                <div>
+                    <input type="text" id="chat-text" />
+                    <button id="send">보내기</button>
+                </div>
+                <div class="message-box"></div>
             </div>
-            <div class="wrap-right-bottom"></div>
         </div>
     </div>
-    <script src="/javascripts/main.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"
+        integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI"
+        crossorigin="anonymous"></script>
+    <script src="/javascripts/chat.js"></script>
 </body>
 
 </html>

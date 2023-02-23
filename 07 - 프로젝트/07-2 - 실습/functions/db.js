@@ -1,23 +1,25 @@
 const mariadb = require("mariadb/callback");
 
-// callback을 변수의 마지막에 넣어 해당 결과값을 callback으로 반환한다고 선언 해 줍니다.
 function asyncSQL(sql, callback) {
+  console.log(sql);
   const conn = mariadb.createConnection({
     host: process.env.host,
     user: process.env.user,
     password: process.env.password,
     port: process.env.dbport,
     database: process.env.database,
+    // SELECT COUNT를 했을 때 숫자로 받는 법
+    supportBigNumbers: true,
+    bigNumberStrings: true,
   });
 
   conn.query(sql, (err, rows) => {
-    // 아래의 callback에서 결과값을 반환 합니다.
+    console.log(rows);
     callback(err, rows);
     conn.end();
   });
 }
 
-// 해당 프로젝트 코드에는 해당 주석을 삭제 하였으나 여기에는 남겨 두겠습니다.
 // async function asyncSQL(sql) {
 //   const conn = await mariadb.createConnection({
 //     host: process.env.host,

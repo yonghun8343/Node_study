@@ -1,9 +1,40 @@
 /* eslint-disable camelcase */
-sessionStorage.setItem("id", 4);
+sessionStorage.setItem("id", 3);
 sessionStorage.setItem("name", "4");
 sessionStorage.setItem("nick", "4");
 
 const uid = sessionStorage.getItem("id");
+
+let page = 0;
+const count = 10;
+let isEnd = false;
+
+getUserList(uid, page, count, () => {
+  document
+    .getElementsByClassName("wrap-right-bottom")[0]
+    .addEventListener("scroll", () => {
+      // scroll의 전체 높이
+      // bottom.scrollHeight
+      const scHei =
+        document.getElementsByClassName("wrap-right-bottom")[0].scrollHeight;
+
+      // 현재 스크롤의 위치
+      // bottom.scrollTop
+      const scTop =
+        document.getElementsByClassName("wrap-right-bottom")[0].scrollTop;
+
+      const height =
+        document.getElementsByClassName("wrap-right-bottom")[0].clientHeight;
+
+      console.log(`scHei: ${scHei}`);
+      console.log(`scTop: ${scTop}`);
+      console.log(`height: ${height}`);
+      if (scHei <= scTop + height && isEnd === false) {
+        page += 1;
+        getUserList(uid, page, count);
+      }
+    });
+});
 
 function makeBoard(bid, nick, date, content, sort = "DESC") {
   const div1 = document.createElement("div");
@@ -33,7 +64,7 @@ function makeBoard(bid, nick, date, content, sort = "DESC") {
   div1_3_1.append(span1_3_1_1);
 
   div1_3_1.addEventListener("click", () => {
-    location.href = `http://localhost:3000/detail.html/${bid}`;
+    location.href = `http://localhost:3000/detail.html?bid=${bid}`;
   });
 
   div1_3.append(div1_3_1);
@@ -41,20 +72,24 @@ function makeBoard(bid, nick, date, content, sort = "DESC") {
   div1.append(div1_1, div1_2, div1_3);
 
   if (sort === "ASC") {
-    document.getElementsByClassName("wrap-right-bottom")[0].before(div1);
+    document.getElementsByClassName("wrap-right-bottom")[0].prepend(div1);
   } else if (sort === "DESC") {
     document.getElementsByClassName("wrap-right-bottom")[0].append(div1);
   }
 }
 
-function init() {
+function getUserList(userId, pageIndex, limit, callback) {
   const xhr = new XMLHttpRequest();
+  console.log(xhr.status);
 
   xhr.onload = () => {
     if (xhr.status === 200) {
+      console.log(xhr.status);
       const response = JSON.parse(xhr.responseText);
+      if (response.content.length < 10) {
+        isEnd = true;
+      }
       response.content.forEach((element) => {
-        console.log(element);
         makeBoard(
           element.bid,
           element.nick,
@@ -62,6 +97,7 @@ function init() {
           element.content
         );
       });
+      callback(response);
     }
   };
 
@@ -69,11 +105,12 @@ function init() {
     console.error(xhr.responseText);
   };
 
-  xhr.open("GET", `http://localhost:3000/board/get/3`);
+  xhr.open(
+    "GET",
+    `http://localhost:3000/board/get/${userId}?page=${pageIndex}&count=${limit}`
+  );
   xhr.send();
 }
-
-init();
 
 document.getElementById("desc-btn").addEventListener("click", () => {
   const xhr = new XMLHttpRequest();
@@ -92,6 +129,7 @@ document.getElementById("desc-btn").addEventListener("click", () => {
         document.getElementById("desc").value,
         "ASC"
       );
+      document.getElementById("desc").value = "";
     }
   };
 
@@ -134,14 +172,28 @@ function getTime(date) {
       val = `${Math.floor(pass / 86400000)}일 전`;
       break;
 
-    case pass >= 3600000:
-      val = `${Math.floor(pass / 3600000)}분 전`;
+    case pass >= 60000:
+      console.log(pass);
+      val = `${Math.floor(pass / 60000)}분 전`;
       break;
 
     default:
+      console.log("default");
       val = "0분 전";
       break;
   }
 
   return `${year}-${month}-${day} ${hh}:${mm} (${val})`;
 }
+
+const home = document.getElementById("home");
+home.addEventListener("click", () => {
+  location.href = "http://localhost:3000/main.html";
+});
+
+const profile = document.getElementById("profile");
+profile.addEventListener("click", () => {
+  location.href = `http://localhost:3000/profile.html?uid=${sessionStorage.getItem(
+    "id"
+  )}`;
+});

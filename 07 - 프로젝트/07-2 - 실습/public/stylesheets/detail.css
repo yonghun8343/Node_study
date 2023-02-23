@@ -1,0 +1,79 @@
+@import "reset.css";
+@import "font.css";
+@import "main.css";
+
+.comment-content {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.comment-middle,
+.comment-bottom {
+  margin-top: 30px;
+}
+
+.comment-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  width: calc(100% - 100px);
+  border: 1px solid black;
+  border-right: none;
+  height: 40px;
+  padding: 0;
+}
+
+.text:focus {
+  outline: none;
+}
+
+#comment-btn {
+  border-radius: 0px;
+  border: 1px solid black;
+  border-left: none;
+  height: 40px;
+  padding: 0;
+}
+.comment-more {
+  margin-top: 30px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.comment-more span:hover {
+  color: blue;
+  font-weight: 900;
+}
+.comment-first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.comment-first div:nth-child(1) {
+  width: 80%;
+}
+
+.comment-first div:nth-child(1) span:nth-child(2) {
+  margin-left: 30px;
+}
+
+.comment-first div:nth-child(2) {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.comment-first div:nth-child(2) span {
+  cursor: pointer;
+}
+
+.comment-second {
+  margin-top: 20px;
+}

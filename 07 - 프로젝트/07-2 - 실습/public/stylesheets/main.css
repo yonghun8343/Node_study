@@ -88,15 +88,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* margin-left: 73%;
+  margin-top: 7px; */
 }
 
 #desc-btn {
-  margin-top: 20px;
+  margin-top: 7px;
   float: right;
 }
 
 .wrap-right-bottom {
   margin-top: 30px;
+  overflow-y: scroll;
+  width: 80%;
+  height: calc(100% - 353px);
+}
+
+.wrap-right-bottom::-webkit-scrollbar {
+  width: 6px;
+}
+
+.wrap-right-bottom::-webkit-scrollbar-thumb {
+  height: 17%;
+  background-color: black;
+  border-radius: 10px;
 }
 
 .board-content {
